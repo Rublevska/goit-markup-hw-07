@@ -476,17 +476,23 @@ body {
 }
 
 .title {
-  text-align: center;
   margin-bottom: 8px;
-
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--title-txt);
 }
 
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .title {
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
   }
@@ -574,7 +580,7 @@ body {
 .title-team-item {
   text-align: center;
   margin-bottom: 8px;
-
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -649,9 +655,13 @@ body {
   line-height: 1.1;
 }
 
-.customers-list {
-  --item: 2;
-  --indent-quantity: 1;
+@media screen and (max-width: 767px) {
+  .customers-list {
+    --item: 2;
+    --indent-quantity: 1;
+    --indent: 16px;
+    column-gap: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
