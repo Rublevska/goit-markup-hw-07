@@ -504,6 +504,12 @@ body {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 1157px) {
+  .description {
+    font-weight: 500;
+  }
+}
+
 .feature-icon {
   display: none;
 }
@@ -646,8 +652,9 @@ body {
 /* Customers */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .customers-container {
-    max-width: 552px;
-    padding: 0;
+    max-width: 582px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -743,8 +750,9 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
-    max-width: 552px;
-    padding: 0;
+    max-width: 582px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -945,14 +953,30 @@ body {
   margin-bottom: 72px;
 }
 
+@media screen and (max-width: 427px) {
+  .portfotio-menu {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 .portfolio-btn {
   border-color: var(--border-color);
   padding: 12px 24px;
+
+  height: 48px;
   color: var(--dark-btn-txt);
   background-color: var(--btn-background);
 
   transition: color var(--anim-speed), background-color var(--anim-speed),
     border var(--anim-speed), box-shadow var(--anim-speed);
+}
+
+@media screen and (max-width: 427px) {
+  .portfolio-btn {
+    padding: 8px 16px;
+    height: 40px;
+  }
 }
 
 .portfolio-btn:hover,
@@ -1058,9 +1082,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 408px;
+  width: 392px;
   min-height: 584px;
   padding: 72px 24px 24px;
+  overflow: auto;
 
   color: var(--title-txt);
   background-color: #fcfcfc;
@@ -1069,6 +1094,12 @@ body {
   border-radius: 4px;
 
   transition: transform var(--anim-speed) 250ms;
+}
+
+@media screen and (max-width: 320px) {
+  .modal {
+    width: 98%;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1244,6 +1275,12 @@ body {
   background-size: 10px;
 }
 
+@media screen and (max-width: 320px) {
+  .agreement-discription {
+    width: 241px;
+  }
+}
+
 .contact-send-btn {
   margin: 0 auto;
   padding: 16px 32px;
@@ -1368,9 +1405,12 @@ body {
   color: var(--accent-bg-color);
 }
 
+.mobile-contacts-item {
+  margin-bottom: 40px;
+}
+
 .mobile-tel {
   display: block;
-  margin-bottom: 40px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -1401,5 +1441,11 @@ body {
 
 .mobile-socials {
   display: flex;
-  justify-content: space-between;
+  gap: 56px;
+}
+
+@media screen and (max-width: 427px) {
+  .mobile-socials {
+    gap: 28px;
+  }
 }
